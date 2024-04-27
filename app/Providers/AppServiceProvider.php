@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\UserPersonalAccessToken;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Sanctum\Sanctum;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // @link https://github.com/barryvdh/laravel-ide-helper
+        if ($this->app->environment('local')) {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        }
     }
 
     /**
@@ -19,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // @link https://laravel.com/docs/11.x/sanctum#overriding-default-models
+        Sanctum::usePersonalAccessTokenModel(UserPersonalAccessToken::class);
+
+        // @link https://laravel.com/docs/9.x/eloquent#enabling-eloquent-strict-mode
+        Model::shouldBeStrict();
     }
 }

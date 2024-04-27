@@ -1,66 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Developers
+How to get started working on this project is below.
+### Requirements
+To run this application you need to have:
+- [PHP](https://www.php.net/releases/8.3/en.php) Version: `^8.3`
+- Exif PHP Extension
+- GD PHP Extension
+- Imagick PHP Extension
+- BCMath PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- Fileinfo PHP extension
+- Mbstring PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+### Official and third-party libraries
+List of used packages:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum) for SPA authentication.
+- [Laravel Telescope](https://laravel.com/docs/11.x/telescope) provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps, and more.
+- [Laravel Horizon](https://laravel.com/docs/11.x/horizon#introduction) provides a beautiful dashboard and code-driven configuration for your Laravel powered Redis queues. Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.
+- [S3 Driver Configuration](https://laravel.com/docs/11.x/filesystem#s3-driver-configuration) The S3 driver configuration information is located in your `config/filesystems.php` configuration file. This file contains an example configuration array for an S3 driver. You are free to modify this array with your own S3 configuration and credentials. For convenience, these environment variables match the naming convention used by the AWS CLI.
+- [PHPRedis](https://github.com/phpredis/phpredis) a PHP extension for Redis
+- [Laravel IDE Helper Generator](https://github.com/barryvdh/laravel-ide-helper) to generate accurate autocompletion.
+- [Laravel Pint](https://laravel.com/docs/11.x/pint) is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.
+- [PHPStan](https://phpstan.org/) scans your whole codebase and looks for both obvious & tricky bugs. Even in those rarely executed if statements that certainly aren't covered by tests.
+- [Laravel Enlighten](https://www.laravel-enlightn.com/) scans your Laravel app code to provide you actionable recommendations on improving its performance, security & more.
+- [Laravel Query Builder](https://spatie.be/docs/laravel-query-builder/v5/introduction) a package allows you to filter, sort and include eloquent relations based on a request. The QueryBuilder used in this package extends Laravel's default Eloquent builder. This means all your favorite methods and macros are still available. Query parameter names follow the JSON API specification as closely as possible.
+- [Laravel Media Library](https://spatie.be/docs/laravel-medialibrary/v11/introduction) a package can associate all sorts of files with Eloquent models. It provides a simple, fluent API to work with.
+- [Laravel Phone](https://github.com/Propaganistas/Laravel-Phone) a phone number functionality for Laravel
+- [Intervention Validation](https://validation.intervention.io/v4) is an extension library for Laravel's own validation system. The package adds over 30 additional validation rules to verify data like IBAN, BIC, ISBN, creditcard numbers and more.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Laravel Coding Standard
+You can now run the test simply typing
+<pre><code>./vendor/bin/pint</code></pre>
 
-## Learning Laravel
+### Static Analysis Tool
+PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even in those rarely executed if statements that certainly aren't covered by tests.
+<pre><code>./vendor/bin/phpstan analyse</code></pre>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Laravel IDE Helper
+This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.
+<pre><code>php artisan ide-helper:generate</code></pre>
+<pre><code>php artisan ide-helper:meta</code></pre>
+I recommend to use this with VSCode extension called [Laravel Intellisense](https://marketplace.visualstudio.com/items?itemName=mohamedbenhida.laravel-intellisense)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Getting Started
+Clone the repository
+```
+$ git clone git@github.com:markmarilag27/snel.git
+```
+Copy and edit environment file
+```
+$ cp .env.example .env
+```
+Run to build the app container
+```
+$ docker compose build app
+```
+Run to boot up development, create minio bucket, dynamodb table and composer install and etc.
+```
+$ bash ./run-start.sh
+```
+Enter on container shell
+```
+$ bash ./run-exec-container.sh
+```
+### Finding bugs on your code
+Run this script before commit
+```
+$ bash ./run-before-commit.sh
+```
+### Mailhog
+For viewing local email [Mail & Local Development](https://laravel.com/docs/11.x/mail#mail-and-local-development)
+```
+http://localhost:8025
+```
+### Laravel telescope
+```
+http://localhost/telescope
+```
+### Laravel horizon
+```
+http://localhost/horizon
+```
+### Minio UI
+```
+http://localhost:9000
+```
