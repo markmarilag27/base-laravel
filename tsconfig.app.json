@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "resources/**/*", "resources/**/*.vue"],
+  "exclude": ["resources/vue/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./resources/vue/*"],
+      "@api/*": ["./resources/vue/api/*"],
+      "@components/*": ["./resources/vue/components/*"],
+      "@router/*": ["./resources/vue/router/*"],
+      "@utils/*": ["./resources/vue/utils/*"],
+      "@pages/*": ["./resources/vue/pages/*"],
+      "~": ["./resources/assets/*"]
+    },
+    "ignoreDeprecations": "5.0",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+}
