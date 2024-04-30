@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  Hello World
+  Index User Page
 </template>

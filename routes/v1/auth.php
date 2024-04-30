@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| API Versions Routes
+| API Auth Routes
 |--------------------------------------------------------------------------
 */
 
-Route::name('v1.')->prefix('v1')->group(base_path('routes/api/v1/index.php'));
+Route::name('auth.')->prefix('auth')->group(function () {
+    // routes here
+});

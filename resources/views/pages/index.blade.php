@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.index')
 
-@section('title', __('Unauthorized'))
+@section('title', 'SEO catching word')
 @section('content')
 Hello World
 @endsection

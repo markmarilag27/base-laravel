@@ -1,11 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
-| API Versions Routes
+| API V1 Routes
 |--------------------------------------------------------------------------
 */
 
-Route::name('v1.')->prefix('v1')->group(base_path('routes/api/v1/index.php'));
+require base_path('routes/api/v1/auth.php');
+require base_path('routes/api/v1/auth.php');

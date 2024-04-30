@@ -11,14 +11,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="canonical" href="{{ url()->current() }}">
-    <title>{{ config('app.name') }} -@stack('title')</title>
+    <title>@yield('title') - {{ config('app.name') }}</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     @stack('head_style')
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    @vite(['resources/css/app.css', 'resources/vue/index.ts'])
+    @vite(['resources/frontend/app.css', 'resources/frontend/index.ts'])
 </head>
 
 <body>

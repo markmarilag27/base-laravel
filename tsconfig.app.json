@@ -1,18 +1,24 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "resources/**/*", "resources/**/*.vue"],
-  "exclude": ["resources/vue/**/__tests__/*"],
+  "exclude": ["resources/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./resources/vue/*"],
-      "@api/*": ["./resources/vue/api/*"],
-      "@components/*": ["./resources/vue/components/*"],
-      "@router/*": ["./resources/vue/router/*"],
-      "@utils/*": ["./resources/vue/utils/*"],
-      "@pages/*": ["./resources/vue/pages/*"],
-      "~": ["./resources/assets/*"]
+      "@/*": ["./resources/*"],
+      "@api/*": ["resources/shares/api/*"],
+      "@components/*": ["resources/shares/components/*"],
+      "@utils/*": ["resources/shares/utils/*"],
+      "@stores/*": ["resources/shares/stores/*"],
+      "@router/*": ["resources/shares/router/*"],
+      "@admin-pages/*": ["resources/stores/admin/pages/*"],
+      "@admin-router/*": ["resources/stores/admin/router/*"],
+      "@admin-stores/*": ["resources/stores/admin/stores/*"],
+      "@app-pages/*": ["resources/stores/app/pages/*"],
+      "@app-router/*": ["resources/stores/app/router/*"],
+      "@app-stores/*": ["resources/stores/app/stores/*"],
+      "~": ["./resources/shares/assets/*"]
     },
     "ignoreDeprecations": "5.0",
     "esModuleInterop": true,

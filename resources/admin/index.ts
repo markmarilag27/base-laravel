@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-const targetElement = document.getElementById('app')
+const targetElement = document.getElementById('admin')
 
 if (targetElement) {
   const app = createApp(App)

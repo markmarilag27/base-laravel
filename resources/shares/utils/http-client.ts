@@ -1,5 +1,5 @@
 import axios, { type AxiosResponse } from 'axios'
-import router from '@/router'
+import router from '@router/index'
 import { HTTP_STATUS_CODE, DEFAULT_AXIOS_TIMEOUT } from '@api/constants.api'
 
 const httpClient = axios.create({
